@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <!-- Google Fonts -->
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+  <!-- MDB -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/5.0.0/mdb.min.css" rel="stylesheet" />
+
+  <link href="/css/main.css" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./acord.css">
+ 
+  <link rel="stylesheet" href="fonts/icomoon/style.css" />
+
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
+  <link rel="stylesheet" href="css/jquery-ui.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mediaelement@4.2.7/build/mediaelementplayer.min.css" />
+
+  <link rel="stylesheet" href="css/aos.css" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- MDB -->
+  <title>Document</title>
+  <style>
+    body {font-family: Arial, Helvetica, sans-serif;}
+    * {box-sizing: border-box;}
+    
+    /* Button used to open the contact form - fixed at the bottom of the page */
+    .open-button {
+      background-color: #555;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      opacity: 0.8;
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+      width: 280px;
+    }
+    
+    /* The popup form - hidden by default */
+    .form-popup {
+      display: none;
+      position: fixed;
+      text-align: center;
+      bottom: 0;
+      right: 15px;
+      border: 3px solid #817b7b;
+      z-index: 9;
+    }
+    #myPDF{
+      display: none;
+        width: 100%;
+        height: 975px;
+    }
+    /* Add styles to the form container */
+    .form-container {
+      max-width: 300px;
+      padding: 10px;
+      background-color: white;
+    }
+    
+    /* Full-width input fields */
+    .form-container input[type=text], .form-container input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+    }
+    
+    /* When the inputs get focus, do something */
+    .form-container input[type=text]:focus, .form-container input[type=password]:focus {
+      background-color: #ddd;
+      outline: none;
+    }
+    
+    /* Set a style for the submit/login button */
+    .form-container .btn {
+      background-color: #04AA6D;
+      color: white;
+      padding: 16px 20px;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      margin-bottom:10px;
+      opacity: 0.8;
+    }
+    
+    /* Add a red background color to the cancel button */
+    .form-container .cancel {
+      background-color:black;
+    }
+    
+    /* Add some hover effects to buttons */
+    .form-container .btn:hover, .open-button:hover {
+      opacity: 1;
+    }
+    </style>
+</head>
+
+<body>
+  <!-- Reports section start-->
+  <!-- Reports section end -->
+<!-- PASTING FORM CODE FROM W3 for form this is for open -->
+<div class="form-popup" id="myForm">
+  <form  class="form-container" name="myForm" ><!--take data from the form in backend and  redirect to the pdf file according the id -->
+    
+
+    
+    <input type="text" placeholder="Enter Name" name="userName" required>
+
+   
+    <input type="text" placeholder="Enter Mail" name="userMail" required>
+
+    
+    <button type="button" class="btn cancel" onclick="validate()">Submit</button><!--onclick="viewReport1()" -->
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+<!-- PASTING END FORM CODE FROM W3 -->
+
+  <div class="container-fluid" id="heading">
+    <div class="row" id="heading1">U T O P I I C </div>
+
+  </div>
+  <!-- image div         -->
+  <div class="container-fluid" style="background-image:url(./assets/Screenshot\ \(7\).png) ; width:1600px; background-repeat: no-repeat;">
+
+    <div id="container-fluid1"></div>
+
+  </div>
+  <!-- content div  -->
+
+  <!-- image div  -->
+  <!-- paste here -->
+  <div class="container-fluid">
+
+    <div class="row">
+      <div class="col-sm-12 col-lg-12 col-md-12 " style="margin-top: 30px; margin-bottom: 1px;">
+
+        <div class="d-flex justify-content-around">
+
+          <div class="container ">
+            <div class="row ">
+
+              <div class="col" id="insight">
+                <strong class="text-dark" style=" font-weight: 750; font-size: 25px;">INSIGHTS</strong>
+              </div>
+
+              <!-- <div class="col" id="viewall" style="display: flex ;justify-content: right;color:black;" >
+                          <a href="#" id="atag"  >VIEW ALL</a >
+                        </div> -->
+            </div>
+          </div>
+
+
+        </div>
+
+      </div>
+      <div class="col-sm-12 col-lg-12 col-md-12 ">
+        <section>
+          <div class="container mt-5 ">
+            <p class="text-dark" id="utext">
+              <strong>
+                UTOPIIC is an impact technology company that builds industry-specific digital sustainability solutions
+                for businesses to adapt to a carbon-neutral future. Our framework was developed keeping in mind the
+                current demands of both the earth and enterprises. UTOPIIC makes sustainability business-friendly,
+                affordable
+              </strong>
+            </p>
+
+          </div>
+
+        </section>
+
+      </div>
+
+      <div class="col-sm-12 col-lg-12 col-md-12 " style="margin-bottom: 40px;">
+        <section>
+          <div class="container mt-5  ">
+            <!-- Grid row -->
+            <div class=" container ">
+              <div class="row ">
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-12 mb-lg-4 mb-4">
+
+
+                  <div class="card hoverable">
+
+
+                    <img class="card-img-top" src="./assets/aa.jpeg" alt="Card image cap">
+
+
+                    <div class="card-body"  style="background-color:#D1D1D1;">
+
+
+                      <a href="#!" class="text-light" style="font-weight: 400 ; color: white;">We Harshit relocated to a new garage</a>
+
+                      <p class="card-title text-muted font-small mt-3 mb-2">Some quick example text to build on the card
+                        title and make up the bulk of the card's content. Some quick example text to build on the card
+                        title.</p>
+
+                      <button type="button" class="btn btn-flat text-light p-0 mx-0" onclick="openForm()" style="background-color:	black;" >View Report<i
+                          class="fa fa-angle-right ml-2"></i></button>     <!-- onclick="openForm()" -->
+
+                    </div>
+
+                  </div>
+
+                </div>
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-6 mb-0">
+
+                  <!-- Card -->
+                  <div class="card hoverable">
+
+                    <!-- Card image -->
+                    <img class="card-img-top" src="./assets/cc.jpeg" alt="Card image cap">
+
+                    <!-- Card content -->
+                    <div class="card-body" style="background-color:#D1D1D1;">
+
+                      <!-- Title -->
+                      <a href="#!" class="text-dark"  style="font-weight: 400 ;">Best practices for minimal design</a>
+                      <!-- Text -->
+                      <p class="card-title text-muted font-small mt-3 mb-2" >Some quick example text to build on the card
+                        title and make up the bulk of the card's content. Some quick example text to build on the card
+                        title.</p>
+
+                      <button  class="btn btn-flat text-light p-0 mx-0" role="button" style="background-color:#353935 ;"><a style="color: white;" href="article1.html">Read more</a><i
+                          class="fa fa-angle-right ml-2"></i></button>
+
+                    </div>
+
+                  </div>
+                  <!-- Card -->
+
+                </div>
+                <!-- Grid column -->
+                <div class="col-lg-4 col-md-6 mb-0">
+
+                  <!-- Card -->
+                  <div class="card hoverable">
+
+                    <!-- Card image -->
+                    <img class="card-img-top" src="./assets/aa.jpeg" alt="Card image cap">
+
+                    <!-- Card content -->
+                    <div class="card-body" style="background-color:#D1D1D1;">
+
+                      <!-- Title -->
+                      <a href="#!" class="text-dark"  style="font-weight: 400 ;">Best practices for minimal design</a>
+                      <!-- Text -->
+                      <p class="card-title text-muted font-small mt-3 mb-2">Some quick example text to build on the card
+                        title and make up the bulk of the card's content. Some quick example text to build on the card
+                        title.</p>
+
+                      <button type="button" class="btn btn-flat text-light p-0 mx-0"  style="background-color: #353935;">Read more<i
+                          class="fa fa-angle-right ml-2"></i></button>
+
+                    </div>
+
+                  </div>
+                  <!-- Card -->
+
+                </div>
+                <div class="col-lg-4 col-md-6 mb-0">
+
+                  <!-- Card -->
+                  <div class="card hoverable">
+
+                    <!-- Card image -->
+                    <img class="card-img-top" src="./assets/aa.jpeg" alt="Card image cap">
+
+                    <!-- Card content -->
+                    <div class="card-body" style="background-color:#D1D1D1;">
+
+                      <!-- Title -->
+                      <a href="#!" class="text-dark"  style="font-weight: 400 ;">Best practices for minimal design</a>
+                      <!-- Text -->
+                      <p class="card-title text-muted font-small mt-3 mb-2">Some quick example text to build on the card
+                        title and make up the bulk of the card's content. Some quick example text to build on the card
+                        title.</p>
+
+                      <button type="button" class="btn btn-flat text-light p-0 mx-0" style="background-color: #353935;">Read more<i
+                          class="fa fa-angle-right ml-2"></i></button>
+
+                    </div>
+
+                  </div>
+                  <!-- Card -->
+
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-0">
+
+                  <!-- Card -->
+                  <div class="card hoverable">
+
+                    <!-- Card image -->
+                    <img class="card-img-top" src="./assets/aa.jpeg" alt="Card image cap">
+
+                    <!-- Card content -->
+                    <div class="card-body" style="background-color:#D1D1D1;">
+
+                      <!-- Title -->
+                      <a href="#!" class="text-dark"  style="font-weight: 400 ;">Best practices for minimal design</a>
+                      <!-- Text -->
+                      <p class="card-title text-muted font-small mt-3 mb-2">Some quick example text to build on the card
+                        title and make up the bulk of the card's content. Some quick example text to build on the card
+                        title.</p>
+
+                      <button type="button" class="btn btn-flat text-light p-0 mx-0"  style="background-color: #353935;">Read more<i
+                          class="fa fa-angle-right ml-2"></i></button>
+
+                    </div>
+
+                  </div>
+                  <!-- Card -->
+
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-0">
+
+                  <!-- Card -->
+                  <div class="card hoverable">
+
+                    <!-- Card image -->
+                    <img class="card-img-top" src="./assets/aa.jpeg" alt="Card image cap">
+
+                    <!-- Card content -->
+                    <div class="card-body" style="background-color:#D1D1D1;">
+
+                      <!-- Title -->
+                      <a href="#!" class="text-dark"  style="font-weight: 400 ;">Best practices for minimal design</a>
+                      <!-- Text -->
+                      <p class="card-title text-muted font-small mt-3 mb-2">Some quick example text to build on the card
+                        title and make up the bulk of the card's content. Some quick example text to build on the card
+                        title.</p>
+
+                      <button type="button" class="btn btn-flat text-light p-0 mx-0"  style="background-color: #353935;">Read more<i
+                          class="fa fa-angle-right ml-2"></i></button>
+
+                    </div>
+
+                  </div>
+                  <!-- Card -->
+
+                </div>
+              
+              </div>
+
+
+            </div>
+
+
+            <!-- </section> -->
+
+          </div>
+
+        </section>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- Footer -->
+
+
+  </div>
+  <!-- paste end here -->
+  <!-- haha -->
+  <footer class="text-center text-lg-start   text-muted" style="background-color: black;">
+    <div class="container-fluid" style="background-image:url(./assets/Screenshot\ \(7\).png)  ;  width:1600px; background-repeat: no-repeat;">
+
+      <div id="container-fluid1"></div>
+
+    </div>
+
+    <section class="">
+      <div class="container text-left text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+
+          <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mb-4" style="color: white;">
+            <!-- Links -->
+
+            <h5>
+              <a href="#!" class="text-reset">About us</a>
+            </h5>
+            <br>
+            <h5>
+              <a href="#!" class="text-reset">Privacy Policy</a>
+            </h5>
+            <br>
+            <h5>
+              <a href="#!" class="text-reset">Terms & Conditions</a>
+            </h5>
+            <br>
+            <h5>
+              <a href="#!" class="text-reset">Contact</a>
+            </h5>
+          </div>
+
+          <div class="col-md-6  col-lg-6 col-xl-6   mb-md-0 mb-4" style="background-color: black">
+
+            <div class="container">
+              <div class="col1">
+                <label for="exampleInputEmail1" style="color: white; font-size: 1.3em;">Signup for our
+                  newsletter for
+                  the latest news and insights on sustainability and climate change</label>
+              </div>
+              <div class="row">
+                <div class="col"> <input type="email" class="form-control" id="exampleInputEmail1"
+                    aria-describedby="emailHelp" placeholder="Enter email"></div>
+                <div class="col"><button type="submit" class="btn btn-secondary">Subscribe</button>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+      </div>
+    </section>
+
+  </footer>
+  <!-- haha -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <script src="./acordd.js"></script>
+  <script src="insights.js"></script>
+</body>
+
+</html>
